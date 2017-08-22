@@ -7,8 +7,6 @@ resources:
                     groups: ['player_read', 'player_extra']
             put:
                 method: 'PUT'
-            delete:
-                method: 'DELETE'
         attributes:
             normalization_context:
                 groups: ['player_read']
