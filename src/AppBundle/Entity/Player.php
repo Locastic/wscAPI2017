@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Class User
@@ -18,13 +19,45 @@ class Player extends BaseUser
 
     /**
      * @var string
+     *
+     * @Groups({"player_read", "player_write"})
      */
     private $firstName;
 
     /**
      * @var string
+     *
+     * @Groups({"player_read", "player_write"})
      */
     private $lastName;
+
+    /**
+     * @var string
+     *
+     * @Groups({"player_read", "player_write"})
+     */
+    protected $email;
+
+    /**
+     * @var string
+     *
+     * @Groups({"player_read", "player_write"})
+     */
+    protected $username;
+
+    /**
+     * @var \DateTime
+     *
+     * @Groups({"player_extra"})
+     */
+    protected $lastLogin;
+
+    /**
+     * @var array
+     *
+     * @Groups({"player_extra"})
+     */
+    protected $roles;
 
     /**
      * @return int
