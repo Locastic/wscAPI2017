@@ -1,0 +1,38 @@
+AppBundle\Entity\Player:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [username, email]
+    properties:
+        firstName:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 180
+        lastName:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 180
+        email:
+            - Email: ~
+            - NotBlank: ~
+        username:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 180
+
+AppBundle\Entity\Match:
+    properties:
+        playerOne:
+            - NotNull: ~
+        playerTwo:
+            - NotNull: ~
+        playerOnePoints:
+            - NotNull: ~
+            - Choice:
+                choices: ['0','1','2','3']
+        playerTwoPoints:
+            - NotNull: ~
+            - Choice:
+                choices: ['0','1','2','3']

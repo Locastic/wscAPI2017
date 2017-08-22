@@ -18,6 +18,8 @@ Use different groups for different operations:
 - Fields that need to be exposed for GET Player item operation:
     `firstName`, `lastName`, `email`, `username`, `lastLogin`, `roles`
 
+Disable DELETE action for Player
+
 More info
 ---------
 API Platform Core allows to choose which attributes of the resource are exposed during
