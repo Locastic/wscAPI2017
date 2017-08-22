@@ -118,3 +118,15 @@ api_platform:
     enable_nelmio_api_doc: true
     enable_swagger: false
     enable_swagger_ui: false
+
+# Lexik JWT Authentication Bundle
+lexik_jwt_authentication:
+    private_key_path: '%jwt_private_key_path%'
+    public_key_path:  '%jwt_public_key_path%'
+    pass_phrase:      '%jwt_key_pass_phrase%'
+    token_ttl:        '%jwt_token_ttl%'
+
+# JWTRefreshTokenBundle
+gesdinet_jwt_refresh_token:
+    ttl: 2592000
+    firewall: api

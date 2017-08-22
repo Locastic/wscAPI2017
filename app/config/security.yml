@@ -7,6 +7,32 @@ security:
             id: fos_user.user_provider.username_email
 
     firewalls:
+        login:
+            pattern:  ^/api/v1/login
+            stateless: true
+            anonymous: true
+            form_login:
+                check_path:               /api/v1/login-check
+                username_parameter:       username
+                password_parameter:       password
+                success_handler:          lexik_jwt_authentication.handler.authentication_success
+                failure_handler:          lexik_jwt_authentication.handler.authentication_failure
+                require_previous_session: false
+
+        api:
+            pattern:   ^/api/v1
+            provider: fos_userbundle
+            stateless: true
+            anonymous: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+
+        refresh:
+            pattern:  ^/api/v1/token/refresh
+            stateless: true
+            anonymous: true
+
         main:
             pattern: ^/
             form_login:
@@ -17,4 +43,8 @@ security:
 
     access_control:
         - { path: ^/api/v1/doc,       roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api/v1/,       roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/v1/login-check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/v1/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/v1/token/refresh, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/v1/,       roles: IS_AUTHENTICATED_FULLY }
