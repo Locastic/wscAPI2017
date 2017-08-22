@@ -32,6 +32,9 @@ resources:
                 method: GET
             post:
                 method: POST
+            get_mine:
+                method: 'GET'
+                path: '/me/matches.{_format}'
         itemOperations:
             get:
                 method: GET
