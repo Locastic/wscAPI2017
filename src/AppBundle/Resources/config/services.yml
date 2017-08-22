@@ -25,3 +25,19 @@ services:
             - '@security.token_storage'
         tags:
             - { name: api_platform.doctrine.orm.query_extension.collection, priority: 9 }
+
+    app.filter.search_player:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [{ firstName: 'partial', lastName: 'partial', email: 'exact' }]
+        tags: [{ name: 'api_platform.filter', id: 'player.search' }]
+
+    app.filter.order_player:
+        parent: 'api_platform.doctrine.orm.order_filter'
+        arguments: [{ firstName: 'ASC', lastName: 'ACS', email: 'ASC' }]
+        tags: [{ name: 'api_platform.filter', id: 'player.order' }]
+
+    app.filter.date_match:
+        parent: 'api_platform.doctrine.orm.date_filter'
+        arguments: [{ datetime: ~ }]
+        tags: [{ name: 'api_platform.filter', id: 'match.date' }]
+
