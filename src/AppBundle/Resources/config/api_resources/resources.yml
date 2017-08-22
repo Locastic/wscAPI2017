@@ -1,5 +1,19 @@
 resources:
     AppBundle\Entity\Player:
+        itemOperations:
+            get:
+                method: 'GET'
+                normalization_context:
+                    groups: ['player_read', 'player_extra']
+            put:
+                method: 'PUT'
+            delete:
+                method: 'DELETE'
+        attributes:
+            normalization_context:
+                groups: ['player_read']
+            denormalization_context:
+                groups: ['player_write']
         iri: http://schema.org/Person
         properties:
             'firstName':
