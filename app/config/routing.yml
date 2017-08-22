@@ -21,3 +21,12 @@ gesdinet_jwt_refresh_token:
     defaults:
         _controller: AppBundle:Authentication:refreshToken
     methods: ['POST']
+
+get_player:
+    path: /api/v1/players/{id}.{_format}
+    defaults:
+        _controller: AppBundle:Player:getPlayer
+        _api_resource_class: AppBundle\Entity\Player
+        _api_item_operation_name: get
+        _format: jsonld
+    methods: ['GET']
