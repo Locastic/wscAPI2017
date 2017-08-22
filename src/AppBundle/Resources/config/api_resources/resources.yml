@@ -9,6 +9,12 @@ resources:
                 method: 'PUT'
             delete:
                 method: 'DELETE'
+        collectionOperations:
+            post:
+                method: 'POST'
+                access_control: 'has_role("ROLE_ADMIN")'
+            get:
+                method: 'GET'
         attributes:
             normalization_context:
                 groups: ['player_read']
