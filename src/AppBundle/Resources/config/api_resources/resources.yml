@@ -24,3 +24,18 @@ resources:
                 iri: http://schema.org/familyName
             'lastName':
                 iri: http://schema.org/givenName
+
+    AppBundle\Entity\Match:
+        collectionOperations:
+            get:
+                method: GET
+            post:
+                method: POST
+        itemOperations:
+            get:
+                method: GET
+        attributes:
+            normalization_context:
+                groups: ['match_read']
+            denormalization_context:
+                groups: ['match_write']

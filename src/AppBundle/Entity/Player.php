@@ -20,14 +20,14 @@ class Player extends BaseUser
     /**
      * @var string
      *
-     * @Groups({"player_read", "player_write"})
+     * @Groups({"player_read", "player_write", "match_read"})
      */
     private $firstName;
 
     /**
      * @var string
      *
-     * @Groups({"player_read", "player_write"})
+     * @Groups({"player_read", "player_write", "match_read"})
      */
     private $lastName;
 
