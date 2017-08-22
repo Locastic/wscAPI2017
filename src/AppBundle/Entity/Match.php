@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use AppBundle\Entity\Player;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Match
@@ -16,31 +17,43 @@ class Match
 
     /**
      * @var \DateTime
+     *
+     * @Groups({"match_read"})
      */
     private $datetime;
 
     /**
      * @var integer
+     *
+     * @Groups({"match_read", "match_write"})
      */
     private $playerOnePoints;
 
     /**
      * @var integer
+     *
+     * @Groups({"match_read", "match_write"})
      */
     private $playerTwoPoints;
 
     /**
      * @var Player
+     *
+     * @Groups({"match_read", "match_write"})
      */
     private $playerOne;
 
     /**
      * @var Player
+     *
+     * @Groups({"match_read", "match_write"})
      */
     private $playerTwo;
 
     /**
      * @var Player
+     *
+     * @Groups({"match_read"})
      */
     private $winner;
 

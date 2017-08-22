@@ -118,6 +118,11 @@ api_platform:
     enable_nelmio_api_doc: true
     enable_swagger: false
     enable_swagger_ui: false
+    collection:
+        pagination:
+            items_per_page: 10 # Default value
+            client_items_per_page: true # Disabled by default
+            items_per_page_parameter_name: itemsPerPage # Default value
 
 # Lexik JWT Authentication Bundle
 lexik_jwt_authentication:
