@@ -60,6 +60,12 @@ class Player extends BaseUser
     protected $roles;
 
     /**
+     * @var string
+     * @Groups({"player_extra"})
+     */
+    private $matchesWon;
+
+    /**
      * @return int
      */
     public function getId()
@@ -97,5 +103,21 @@ class Player extends BaseUser
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMatchesWon()
+    {
+        return $this->matchesWon;
+    }
+
+    /**
+     * @param string $matchesWon
+     */
+    public function setMatchesWon($matchesWon)
+    {
+        $this->matchesWon = $matchesWon;
     }
 }

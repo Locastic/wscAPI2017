@@ -3,6 +3,7 @@ resources:
         itemOperations:
             get:
                 method: 'GET'
+                route_name: 'get_player'
                 normalization_context:
                     groups: ['player_read', 'player_extra']
             put:
