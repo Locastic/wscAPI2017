@@ -17,6 +17,7 @@ resources:
             get:
                 method: 'GET'
         attributes:
+            filters: ['player.search', 'player.order']
             normalization_context:
                 groups: ['player_read']
             denormalization_context:
@@ -41,6 +42,7 @@ resources:
             get:
                 method: GET
         attributes:
+            filters: ['match.date']
             normalization_context:
                 groups: ['match_read']
             denormalization_context:
