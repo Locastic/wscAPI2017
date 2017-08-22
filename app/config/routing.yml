@@ -11,4 +11,13 @@ fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 api_login_check:
-    path: /api/v1/login_check
+    path: /api/v1/login-check
+    defaults:
+        _controller: AppBundle:Authentication:loginCheck
+    methods: ['POST']
+
+gesdinet_jwt_refresh_token:
+    path:     /api/v1/token/refresh
+    defaults:
+        _controller: AppBundle:Authentication:refreshToken
+    methods: ['POST']

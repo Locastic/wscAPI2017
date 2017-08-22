@@ -23,8 +23,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
 
             //Third-party bundles
-//            new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
-//            new Gesdinet\JWTRefreshTokenBundle\GesdinetJWTRefreshTokenBundle(),
+            new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
+            new Gesdinet\JWTRefreshTokenBundle\GesdinetJWTRefreshTokenBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
         ];
