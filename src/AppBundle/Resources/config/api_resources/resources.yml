@@ -7,6 +7,12 @@ resources:
                     groups: ['player_read', 'player_extra']
             put:
                 method: 'PUT'
+        collectionOperations:
+            post:
+                method: 'POST'
+                access_control: 'has_role("ROLE_ADMIN")'
+            get:
+                method: 'GET'
         attributes:
             normalization_context:
                 groups: ['player_read']
