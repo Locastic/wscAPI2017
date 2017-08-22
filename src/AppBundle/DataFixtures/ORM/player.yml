@@ -1,0 +1,23 @@
+AppBundle\Entity\Player:
+    player_{1..30}:
+        firstName: '<firstName()>'
+        lastName: '<lastName()>'
+        username: '<email()>'
+        email: '<email()>'
+        enabled: true
+        plainPassword: '<password()>'
+    player_31:
+        firstName: 'Test'
+        lastName: 'User'
+        username: 'test@pingpong.dev'
+        email: 'test@pingpong.dev'
+        enabled: true
+        plainPassword: 'password'
+    admin:
+        firstName: 'Admin'
+        lastName: 'Admin'
+        username: 'admin@pingpong.dev'
+        email: 'admin@pingpong.dev'
+        enabled: true
+        plainPassword: 'password'
+        roles: ['ROLE_ADMIN']

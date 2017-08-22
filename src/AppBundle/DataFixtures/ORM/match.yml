@@ -1,0 +1,25 @@
+AppBundle\Entity\Match:
+    match{1..20}:
+        playerOne: '@player*'
+        playerTwo: '@player*'
+        datetime: <dateTimeBetween('-6 months', 'now')>
+        playerOnePoints: 3
+        playerTwoPoints: 0
+    match{21..50}:
+        playerOne: '@player*'
+        playerTwo: '@player*'
+        datetime: <dateTimeBetween('-6 months', 'now')>
+        playerOnePoints: 2
+        playerTwoPoints: 1
+    match{51..70}:
+        playerOne: '@player*'
+        playerTwo: '@player*'
+        datetime: <dateTimeBetween('-6 months', 'now')>
+        playerOnePoints: 0
+        playerTwoPoints: 3
+    match{71..100}:
+        playerOne: '@player*'
+        playerTwo: '@player*'
+        datetime: <dateTimeBetween('-6 months', 'now')>
+        playerOnePoints: 1
+        playerTwoPoints: 2

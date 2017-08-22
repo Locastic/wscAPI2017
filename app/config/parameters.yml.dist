@@ -1,0 +1,24 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host:     127.0.0.1
+    database_port:     null
+    database_name:     pingpong
+    database_user:     root
+    database_password: root
+    # You should uncomment this if you want use pdo_sqlite
+    # database_path: "%kernel.root_dir%/data.db3"
+
+    mailer_transport:  gmail
+    mailer_host:       smtp.gmail.com
+    mailer_user:       test@pingpong.dev
+    mailer_password:   test
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    cors_allow_origin: '*'
+
+    api_platform.title: Ping Pong
+    api_platform.description: Ping Pong score keeping API

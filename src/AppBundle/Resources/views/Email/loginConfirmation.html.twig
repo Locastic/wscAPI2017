@@ -1,0 +1,22 @@
+{% block subject %}
+    Welcome to Ping Pong!
+{% endblock %}
+
+{% block body %}
+
+    Hi {{ user.firstName }},
+    this is your account information.
+
+    Your information card:
+    <br>
+    First name: {{ user.firstName }}
+    <br>
+    Last name: {{ user.lastName }}
+    <br>
+    Username: {{ user.username }}
+    <br>
+    Email: {{ user.email }}
+    <br>
+    Password: {{ plainPassword }}
+    <br>
+{% endblock %}

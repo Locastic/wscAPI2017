@@ -1,0 +1,19 @@
+services:
+    app.handler.user:
+        class: AppBundle\Handler\UserHandler
+        arguments:
+            - '@swiftmailer.mailer'
+            - '@twig'
+            - '@fos_user.util.token_generator.default'
+            
+    app.repository.match:
+            class: AppBundle\Repository\MatchRepository
+            factory: ['@doctrine.orm.default_entity_manager', getRepository]
+            arguments:
+                - AppBundle\Entity\Match
+
+    app.repository.player:
+            class: AppBundle\Repository\PlayerRepository
+            factory: ['@doctrine.orm.default_entity_manager', getRepository]
+            arguments:
+                - AppBundle\Entity\Player
