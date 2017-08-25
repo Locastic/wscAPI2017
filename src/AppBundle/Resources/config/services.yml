@@ -19,7 +19,7 @@ services:
                 - AppBundle\Entity\Player
 
     app.extension.mine_matches:
-        class: AppBundle\Doctrine\ORM\Extension\MineMatchesExtension
+        class: AppBundle\Doctrine\ORM\Extension\MyMatchesExtension
         public: false
         arguments:
             - '@security.token_storage'
