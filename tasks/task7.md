@@ -8,7 +8,7 @@ Create /me/matches endpoint which returns all matches current user played.
 Steps
 -----
 - Create collection operation in `resources.yml` for Match with path `/me/matches.{_format}`
-- Create doctrine extension `AppBundle\Doctrine\ORM\Extension\MineMatchesExtension` which implements 
+- Create doctrine extension `AppBundle\Doctrine\ORM\Extension\MyMatchesExtension` which implements 
 `ApiPlatform\Core\Bridge\Doctrine\Orm\Extension\QueryCollectionExtensionInterface`
 - Check operation name and resource class and add necessary conditions to query builder in extension
 - Define extension as service with following tag: 
