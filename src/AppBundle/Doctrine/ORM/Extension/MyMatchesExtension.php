@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
  *
  * @package AppBundle\Doctrine\ORM\Extension
  */
-class MineMatchesExtension implements QueryCollectionExtensionInterface
+class MyMatchesExtension implements QueryCollectionExtensionInterface
 {
     /**
      * @var TokenStorage
