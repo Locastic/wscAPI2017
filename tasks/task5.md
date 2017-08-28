@@ -27,7 +27,7 @@ api_platform:
 
 More info
 ---------
-- Make sure you use IRI for player relation in POST matches
+- Make sure you use IRI for player relation in POST matches: `/api/v1/players/{id}`
 
 **Documentation:**
 - https://api-platform.com/docs/core/pagination
