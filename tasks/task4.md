@@ -35,10 +35,11 @@ You can use Symfony’s access control expressions in resource configuration wit
 
 More info
 ---------
-- Event subscriber is auto wired.
+- Event subscriber is auto wired, so there is no need to define it as service.
 - Check `AppBundle/Handler/UserHandler` and use its methods in subscriber
 - ApiPlatform event methods have 
- `Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent` object as argument.
+ `Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent` object as argument. 
+ This class has method `getControllerResult` which returns current object (in this case Player object)
 
 **Documentation:**
 - https://api-platform.com/docs/core/events
