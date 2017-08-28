@@ -2,7 +2,7 @@ resources:
     AppBundle\Entity\Player:
         iri: http://schema.org/Person
         properties:
-            'firstName':
+            firstName:
                 iri: http://schema.org/familyName
-            'lastName':
+            lastName:
                 iri: http://schema.org/givenName
