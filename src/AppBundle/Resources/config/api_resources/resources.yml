@@ -20,9 +20,9 @@ resources:
                 groups: ['player_write']
         iri: http://schema.org/Person
         properties:
-            'firstName':
+            firstName:
                 iri: http://schema.org/familyName
-            'lastName':
+            lastName:
                 iri: http://schema.org/givenName
 
     AppBundle\Entity\Match:
